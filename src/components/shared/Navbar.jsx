@@ -11,7 +11,7 @@ const Navbar = () => {
 
     <h2 className="text-3xl font-bold 
             ">
-    Keen<span className="font-semibold text-green-950">Keeper</span>
+    Keen<span className="font-semibold text-green-900">Keeper</span>
     </h2>
 
     <ul className="flex items-center gap-3  px-3  rounded-md 
@@ -20,7 +20,7 @@ const Navbar = () => {
             <NavLink to={"/"} className={({isActive}) =>
             `flex items-center gap-1.5
         px-3  rounded-md 
-        text-xl font-medium ${isActive ? " bg-green-950 py-2 text-white" : ""}`
+        text-xl font-medium ${isActive ? " bg-green-900 py-2 text-white" : ""}`
             }>
                 <CiHome />
                 Home
@@ -32,7 +32,7 @@ const Navbar = () => {
     <NavLink to={"/timeline"} className={({isActive}) =>
             `flex items-center gap-1.5
         px-3  rounded-md 
-        text-xl font-medium ${isActive ? " bg-green-950 py-2 text-white" : ""}`
+        text-xl font-medium ${isActive ? " bg-green-900 py-2 text-white" : ""}`
             }>
         <RiTimeLine />
         Timeline
@@ -44,7 +44,7 @@ const Navbar = () => {
     <NavLink to={"/stats"} className={({isActive}) =>
             `flex items-center gap-1.5
         px-3  rounded-md 
-        text-xl font-medium ${isActive ? " bg-green-950 py-2 text-white" : ""}`
+        text-xl font-medium ${isActive ? " bg-green-900 py-2 text-white" : ""}`
             }>  
             <ImStatsDots />
         Status

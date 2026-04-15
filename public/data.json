@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Aisha Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "aisha.rahman@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during freshman orientation. She's now a UX designer in Dhaka who loves street photography.",
+    "goal": 14,
+    "next_due_date": "2025-07-01"
+  },
+  {
+    "id": 2,
+    "name": "James Okafor",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "james.okafor@outlook.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["work", "mentor"],
+    "bio": "My first team lead at the agency. Taught me everything I know about clean code and deadlines.",
+    "goal": 14,
+    "next_due_date": "2025-07-05"
+  },
+  {
+    "id": 3,
+    "name": "Sofia Mendes",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "sofia.mendes@yahoo.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["childhood", "neighbor"],
+    "bio": "Grew up on the same street. Now lives in Lisbon but we talk every week over coffee calls.",
+    "goal": 7,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 4,
+    "name": "Tariq Hassan",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "tariq.hassan@protonmail.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["university", "roommate"],
+    "bio": "We shared a tiny dorm room for two years. He's a civil engineer now and rarely comes online.",
+    "goal": 21,
+    "next_due_date": "2025-06-25"
+  },
+  {
+    "id": 5,
+    "name": "Priya Nair",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "priya.nair@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "close friend"],
+    "bio": "Colleague turned best friend. We bonded over late-night product launches and terrible vending machine coffee.",
+    "goal": 10,
+    "next_due_date": "2025-07-12"
+  },
+  {
+    "id": 6,
+    "name": "Luca Bianchi",
+    "picture": "https://randomuser.me/api/portraits/men/54.jpg",
+    "email": "luca.bianchi@icloud.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["travel", "hobby"],
+    "bio": "Met backpacking through Southeast Asia. We still trade travel tips and meet up whenever our paths cross.",
+    "goal": 14,
+    "next_due_date": "2025-07-03"
+  },
+  {
+    "id": 7,
+    "name": "Nadia Karim",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "nadia.karim@gmail.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["family friend", "childhood"],
+    "bio": "Our parents were close, so we practically grew up together. Life pulled us in different directions but the bond stays.",
+    "goal": 30,
+    "next_due_date": "2025-06-20"
+  },
+  {
+    "id": 8,
+    "name": "Daniel Park",
+    "picture": "https://randomuser.me/api/portraits/men/19.jpg",
+    "email": "daniel.park@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["gym", "hobby"],
+    "bio": "Gym partner and occasional hiking buddy. Keeps me accountable on fitness goals better than any app.",
+    "goal": 7,
+    "next_due_date": "2025-07-14"
+  },
+  {
+    "id": 9,
+    "name": "Fatima Al-Zahra",
+    "picture": "https://randomuser.me/api/portraits/women/55.jpg",
+    "email": "fatima.alzahra@hotmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["college", "study group"],
+    "bio": "We survived finals week together every semester. Now she's doing her PhD in molecular biology in Berlin.",
+    "goal": 14,
+    "next_due_date": "2025-06-28"
+  },
+  {
+    "id": 10,
+    "name": "Marcus Thompson",
+    "picture": "https://randomuser.me/api/portraits/men/88.jpg",
+    "email": "marcus.thompson@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["mentor", "work"],
+    "bio": "A senior dev who reviewed my first pull request and didn't laugh. Still gives great career advice over coffee.",
+    "goal": 10,
+    "next_due_date": "2025-07-06"
+  }
+]
