@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { Link } from 'react-router';
 
 const friendsPromise = fetch('/data.json').then((res) => res.json());
 
@@ -20,7 +21,7 @@ function FriendCard({ friend }) {
   const { name, picture, days_since_contact, status, tags } = friend;
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col items-center gap-3 mt-4 text-center">
+    <Link to={`/friend/${friend.id}`} className="bg-white border border-gray-200 rounded-xl p-6 flex flex-col items-center gap-3 mt-4 text-center">
       <img
         src={picture}
         alt={name}
@@ -41,7 +42,7 @@ function FriendCard({ friend }) {
       <span className={`text-[11px] font-medium px-3 py-0.5 rounded-full ${STATUS_STYLES[status]}`}>
         {STATUS_LABELS[status]}
       </span>
-    </div>
+    </Link>
   );
 }
 
