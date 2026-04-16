@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router';
+import { TimelineContext } from "../../context/TimelineContext";
+import { toast } from 'react-toastify';
 
 const FriendDetails = () => {
   const { id } = useParams();
   const [friend, setFriend] = useState(null);
 
+  // ✅ Context
+  const { setTimeline } = useContext(TimelineContext);
+
+  // ✅ Data load
   useEffect(() => {
     fetch('/data.json')
       .then(res => res.json())
@@ -14,14 +20,39 @@ const FriendDetails = () => {
       });
   }, [id]);
 
-  if (!friend) return <p className="text-center mt-10">Loading...</p>;
+  // ✅ Action handler + TOAST
+  const handleAction = (type) => {
+    const newActivity = {
+      id: Date.now(),
+      type,
+      name: friend.name,
+      time: new Date().toLocaleString()
+    };
+
+    // ✅ add to timeline
+    setTimeline(prev => [...prev, newActivity]);
+
+    // ✅ Toast message
+    if (type === "Call") {
+      toast.success(`📞 Call with ${friend.name}`);
+    } else if (type === "Text") {
+      toast.info(`💬 Text with ${friend.name}`);
+    } else {
+      toast.warning(`🎥 Video with ${friend.name}`);
+    }
+  };
+
+  // ✅ loading
+  if (!friend) {
+    return <p className="text-center mt-10">Loading...</p>;
+  }
 
   return (
-    <div className="p-8 mt-10 min-h-screen ">
-      <div className="max-w-6xl  mx-auto grid md:grid-cols-3 gap-6">
+    <div className="p-8 mt-10 min-h-screen">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
 
         {/* LEFT CARD */}
-        <div className=" p-6   bg-gray-100 rounded-4xl shadow text-center">
+        <div className="p-6 bg-gray-100 rounded-4xl shadow text-center">
           <img
             src={friend.picture}
             alt=""
@@ -78,7 +109,7 @@ const FriendDetails = () => {
             </div>
           </div>
 
-          {/* GOAL SECTION */}
+          {/* GOAL */}
           <div className="bg-white p-4 rounded shadow flex justify-between items-center">
             <div>
               <h3 className="font-semibold">Relationship Goal</h3>
@@ -94,9 +125,26 @@ const FriendDetails = () => {
             <h3 className="mb-3 font-semibold">Quick Check-In</h3>
 
             <div className="grid grid-cols-3 gap-4">
-              <button className="btn font-semibold p-7">📞 Call</button>
-              <button className="btn font-semibold p-7">💬 Text</button>
-              <button className="btn font-semibold p-7">🎥 Video</button>
+              <button 
+                className="btn font-semibold p-7" 
+                onClick={() => handleAction("Call")}
+              >
+                📞 Call
+              </button>
+
+              <button 
+                className="btn font-semibold p-7" 
+                onClick={() => handleAction("Text")}
+              >
+                💬 Text
+              </button>
+
+              <button 
+                className="btn font-semibold p-7" 
+                onClick={() => handleAction("Video")}
+              >
+                🎥 Video
+              </button>
             </div>
           </div>
 
