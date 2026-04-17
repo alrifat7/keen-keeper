@@ -2,7 +2,7 @@ import React from 'react';
 import { CiHome } from "react-icons/ci";
 import { ImStatsDots } from 'react-icons/im';
 import { RiTimeLine } from 'react-icons/ri';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (

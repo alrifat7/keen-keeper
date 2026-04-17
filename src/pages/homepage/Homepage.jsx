@@ -10,7 +10,6 @@ const Homepage = () => {
             <Banner />
             <Card />
             <YourFriends />
-           
         </>
     );
 };

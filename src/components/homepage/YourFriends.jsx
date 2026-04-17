@@ -1,18 +1,16 @@
-import React, { use } from 'react';
-import { Link } from 'react-router';
-
-const friendsPromise = fetch('/data.json').then((res) => res.json());
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const STATUS_STYLES = {
-  'overdue':    'bg-red-100 text-red-800',
+  'overdue': 'bg-red-100 text-red-800',
   'almost due': 'bg-amber-100 text-amber-800',
-  'on-track':   'bg-green-100 text-green-800',
+  'on-track': 'bg-green-100 text-green-800',
 };
 
 const STATUS_LABELS = {
-  'overdue':    'Overdue',
+  'overdue': 'Overdue',
   'almost due': 'Almost Due',
-  'on-track':   'On-Track',
+  'on-track': 'On-Track',
 };
 
 const TAG_STYLE = 'bg-blue-50 text-blue-800 text-[10px] px-2 py-0.5 rounded-full';
@@ -47,10 +45,16 @@ function FriendCard({ friend }) {
 }
 
 export default function YourFriends() {
-  const friends = use(friendsPromise);
+  const [friends, setFriends] = useState([]);
+
+  useEffect(() => {
+    fetch('/data.json')
+      .then(res => res.json())
+      .then(data => setFriends(data));
+  }, []);
 
   return (
-    <div className=" container mx-auto bg-gray-50 p-8  ">
+    <div className="container mx-auto bg-gray-50 p-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-7">Your Friends</h2>
 
